@@ -1,0 +1,53 @@
+name: MineLife AI - Python and Fabric validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: minelife-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python-tests:
+    name: Python 3.11 - unittest contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run Python test suite
+        run: python -m unittest discover -s tests -v
+      - name: Check dependency consistency
+        run: python -m pip check
+
+  fabric-build:
+    name: Fabric - JDK 21 build and checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+          cache-dependency-path: |
+            mod/build.gradle
+            mod/settings.gradle
+            mod/gradle/wrapper/gradle-wrapper.properties
+      - name: Build and run the mod verification checks
+        working-directory: mod
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build --no-daemon --console=plain
