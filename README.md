@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/das-animated-icon.svg" alt="MineLife AI animated project emblem" width="122" /></p>
+
 <h1 align="center">MineLife AI</h1>
 
 **What if a game agent had to prove what actually happened?**
