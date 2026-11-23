@@ -1,14 +1,30 @@
-# MineLife AI
+<h1 align="center">MineLife AI</h1>
+
+**What if a game agent had to prove what actually happened?**
+
+*An experimental Minecraft life-agent with memory, goals and evidence-checked actions.*
+
+[Engineering case study](docs/ENGINEERING_CASE_STUDY.md) · [Protocol](docs/PROTOCOL.md) · [Validation log](STATUS.md) · [Roadmap](ROADMAP.md)
 
 [![Python and Fabric CI](https://github.com/DiogoAbreu01/MineLifeIA/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/DiogoAbreu01/MineLifeIA/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/Python-0d1322?style=flat-square&logo=python&logoColor=70bbff)
+![Java / Fabric](https://img.shields.io/badge/Java_%2B_Fabric-0d1322?style=flat-square&logo=openjdk&logoColor=70bbff)
+![SQLite](https://img.shields.io/badge/SQLite-0d1322?style=flat-square&logo=sqlite&logoColor=70bbff)
 
-### Engineering portfolio / International recruiters
 
-**[Read the English engineering case study](docs/ENGINEERING_CASE_STUDY.md)** · [Inspect automated CI](.github/workflows/ci.yml) · [Review validation limits](STATUS.md)
+```text
+    OBSERVE  ──>  PLAN  ──>  ACT  ──>  VERIFY  ──>  REMEMBER
+       ^                                           |
+       └───────────────────────────────────────────┘
+```
 
-MineLife AI illustrates failure-aware agent orchestration, Python/Java interoperability, durable SQLite state, constrained actions and evidence-based verification. The system distinguishes model suggestions, attempted game actions and observed results. **Unit/integration tests and builds do not constitute proof of autonomous gameplay.** The current project is experimental, with documented limitations.
+> **DAs / Agent lab:** Intention isn't execution. A journal entry isn't proof. The world state gets the final word.
 
-Agente experimental de vida artificial simulada que controla o personagem local no Minecraft Java 1.21.1 com Fabric. Ele observa, propõe objetivos limitados por capacidades reais, executa ações nativas e só incorpora resultados sustentados por evidências do servidor integrado. Personalidade e narrativa representam comportamento simulado; o projeto não afirma consciência.
+**The experiment.** Python orchestration and a Java/Fabric Minecraft integration coordinate goals, navigation, crafting, food, shelter and persistent SQLite state. The system records proposed actions separately from actions confirmed by the game.
+
+**Engineering evidence:** [agent integration](docs/ENGINEERING_CASE_STUDY.md), [validation results](docs/VALIDATION_RESULTS.md), and [implementation status](STATUS.md). Automated tests and builds **do not prove continuous autonomous gameplay**. The current version remains experimental.
+
+---
 
 ## Estado alcançado
 
