@@ -1,5 +1,13 @@
 # MineLife AI
 
+[![Python and Fabric CI](https://github.com/DiogoAbreu01/MineLifeIA/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/DiogoAbreu01/MineLifeIA/actions/workflows/ci.yml)
+
+### Engineering portfolio / International recruiters
+
+**[Read the English engineering case study](docs/ENGINEERING_CASE_STUDY.md)** · [Inspect automated CI](.github/workflows/ci.yml) · [Review validation limits](STATUS.md)
+
+MineLife AI illustrates failure-aware agent orchestration, Python/Java interoperability, durable SQLite state, constrained actions and evidence-based verification. The system distinguishes model suggestions, attempted game actions and observed results. **Unit/integration tests and builds do not constitute proof of autonomous gameplay.** The current project is experimental, with documented limitations.
+
 Agente experimental de vida artificial simulada que controla o personagem local no Minecraft Java 1.21.1 com Fabric. Ele observa, propõe objetivos limitados por capacidades reais, executa ações nativas e só incorpora resultados sustentados por evidências do servidor integrado. Personalidade e narrativa representam comportamento simulado; o projeto não afirma consciência.
 
 ## Estado alcançado
