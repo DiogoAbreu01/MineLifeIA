@@ -1,6 +1,4 @@
-<div align="center">
-
-# MineLife AI
+<h1 align="center">MineLife AI</h1>
 
 **What if a game agent had to prove what actually happened?**
 
@@ -13,7 +11,6 @@
 ![Java / Fabric](https://img.shields.io/badge/Java_%2B_Fabric-0d1322?style=flat-square&logo=openjdk&logoColor=70bbff)
 ![SQLite](https://img.shields.io/badge/SQLite-0d1322?style=flat-square&logo=sqlite&logoColor=70bbff)
 
-</div>
 
 ```text
     OBSERVE  ──>  PLAN  ──>  ACT  ──>  VERIFY  ──>  REMEMBER
